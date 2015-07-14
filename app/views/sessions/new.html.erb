@@ -1,0 +1,18 @@
+<form action="<%= session_url %>"
+      method="post"
+      autocomplete="off"
+      class="standard">
+
+  <h2>Sign in!</h2>
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <input type="email"
+         name="user[email]"
+         placeholder="email address">
+  <input type="password"
+         name="user[password]"
+         placeholder="password">
+  <input type="submit" value="get me going!">
+
+</form>
