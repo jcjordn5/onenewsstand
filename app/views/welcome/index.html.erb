@@ -45,6 +45,11 @@
 </dl>
 <% end %>
 
+<h1>YOUTUBE</h1>
+<% @yt["items"].each do |x| %>
+<%= x["player"]["embedHtml"].html_safe%>
+<% end %>
+
 <p>
   The time is now: <%= Time.now %>
 </p>
