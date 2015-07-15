@@ -202,14 +202,8 @@ DEPENDENCIES
   twitter
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-<<<<<<< HEAD
   yt
-=======
-<<<<<<< HEAD
-  yt
-=======
->>>>>>> 4f67c87ebe6edcd488b294283b7e6307d130e696
+
 
 BUNDLED WITH
    1.10.5
->>>>>>> bebff9d1e63c687425f3970ed0ea89ba4506bde2
