@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-  @usatodaybreaking =  HTTParty.get('http://api.usatoday.com/open/breaking?expired=true&api_key=cq8p2k75c6qxqua5m58kd8df')
-  @guardian = HTTParty.get('http://content.guardianapis.com/search?q=politics&api-key=dc2tmawrmyg2xesbwr6q68d4')
+  @guardian = HTTParty.get('http://content.guardianapis.com/search?q=politics&api-key=dc2tmawrmyg2xesbwr6q68d4').to_h["response"]["results"]
+  @nytimes = HTTParty.get('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=30ffb766789e445b73dffdb5f1e23483:6:72504693').to_h["results"]
+  puts @guardian
 end
 end

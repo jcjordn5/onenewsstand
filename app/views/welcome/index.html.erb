@@ -1,8 +1,19 @@
-<h2><%= @usatodaybreaking %></h2>
-<h2><%= @guardian %></h2>
 
-<% puts @usatodaybreaking %>
-<% puts @guardian %>
+<% @guardian.each do |x| %>
+<dl>
+  <dt><a href ="<%= x['webUrl'] %>"><%= x["webTitle"] %></a></dt>
+  <dd><%= x["webPublicationDate"] %></dd>
+</dl>
+<% end %>
+
+<% @nytimes.each do |x| %>
+<dl>
+  <dt><a href ="<%= x['url'] %>"><%= x["title"] %></a></dt>
+  <dd><%= x["title"] %></dd>
+  <dd><%= x["byline"] %></dd>
+  <dd><%= x["abstract"] %></dd>
+</dl>
+<% end %>
 <p>
   The time is now: <%= Time.now %>
 </p>
