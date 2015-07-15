@@ -8,10 +8,6 @@ ActiveSupport.on_load(:action_controller) do
   wrap_parameters format: [:json] if respond_to?(:wrap_parameters)
 end
 
-Yt.configure do |config|
-config.api_key = 'AIzaSyCmAPeIfx6k0wqqwMjlNrSZXiAnywd9H5g'
-end
-
 # To enable root element in JSON for ActiveRecord objects.
 # ActiveSupport.on_load(:active_record) do
 #  self.include_root_in_json = true

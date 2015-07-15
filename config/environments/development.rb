@@ -8,9 +8,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-  Yt.configure do |config|
-  config.api_key = 'AIzaSyCmAPeIfx6k0wqqwMjlNrSZXiAnywd9H5g'
-  end
+
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
