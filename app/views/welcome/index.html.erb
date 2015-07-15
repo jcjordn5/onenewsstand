@@ -4,6 +4,7 @@
   <dt><a href ="<%= x['url'] %>"><%= x["title"] %></a></dt>
   <dd><%= x["byline"] %></dd>
   <dd><%= x["abstract"] %></dd>
+  <dd><%= x["published_date"]%></dd>
 </dl>
 <% end %>
 <h1>THE GUARDIAN</h1>
@@ -11,6 +12,23 @@
 <dl>
   <dt><a href ="<%= x['webUrl'] %>"><%= x["webTitle"] %></a></dt>
   <dd><%= x["webPublicationDate"] %></dd>
+</dl>
+<% end %>
+<h1>NPR</h1>
+<% @nprjson['list']['story'].each do |x| %>
+<dl>
+  <dt><a href = "<%=x['link'][2]['$text']%>"> <%= x['title']['$text']%></a> </dt>
+  <dd><%= x['teaser']["$text"] %></dd>
+</dl>
+<% end %>
+
+</br>
+
+<h1>USA Today</h1>
+<% @usatoday['stories'].each do |x| %>
+<dl>
+  <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
+  <dd><%= x['description'] %></dd>
 </dl>
 <% end %>
 
