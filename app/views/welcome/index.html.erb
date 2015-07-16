@@ -1,52 +1,42 @@
-<h1>Sounds</h1>
-
-<p>
-  <% SoundcloudApi.soundcloudwidget.each do |x| %>
-<%= x.html_safe %>
-  <% end %>
-</p>
-
+<script src = '/app/assets/javascripts/application.js'> </script>
 
 <h1>Tweets</h1>
-
 <ul>
-  <% TwitterApi.trending_tweets.to_h[:trends].each do |tweet| %>
+  <% @twit.each do |x| %>
   <li>
-
-<a href = "<%=tweet[:url]%>" > <%=tweet[:name]%> </a>
+<a href = "<%=x[:url]%>" > <%=x[:name]%> </a>
   </li>
   <% end %>
 </ul>
-
 </br>
 
 <h1>NY TIMES</h1>
-<% @nytimes.each do |x| %>
+<% @nyt.each do |x| %>
 <dl>
-  <dt><a href ="<%= x['url'] %>"><%= x["title"] %></a></dt>
+  <dt><a href ="<%= x['url'] %>"><%= x['title'] %></a></dt>
   <dd><%= x["abstract"] %></dd>
   <dd><%= x["published_date"]%></dd>
 </dl>
 <% end %>
+
 <h1>THE GUARDIAN</h1>
 <% @guardian.each do |x| %>
 <dl>
-  <dt><a href ="<%= x['webUrl'] %>"><%= x["webTitle"] %></a></dt>
+  <dt><a href ="<%= x['weburl'] %>"><%= x["webtitle"] %></a></dt>
   <dd><%= x["webPublicationDate"] %></dd>
 </dl>
 <% end %>
+
 <h1>NPR</h1>
-<% @nprjson['list']['story'].each do |x| %>
+<% @npr.each do |x| %>
 <dl>
-  <dt><a href = "<%=x['link'][2]['$text']%>"> <%= x['title']['$text']%></a> </dt>
-  <dd><%= x['teaser']["$text"] %></dd>
+  <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
+  <dd><%= x['teaser']%></dd>
 </dl>
 <% end %>
 
-</br>
-
 <h1>USA Today</h1>
-<% @usatoday['stories'].each do |x| %>
+<% @usa.each do |x| %>
 <dl>
   <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
   <dd><%= x['description'] %></dd>
@@ -54,15 +44,13 @@
 <% end %>
 
 <h1>YOUTUBE</h1>
-<% @yt["items"].each do |x| %>
-<%= x["player"]["embedHtml"].html_safe%>
+<% @youtube.each do |x| %>
+<%= x['embedhtml'].html_safe%>
 <% end %>
 
-<h1>IMGUR</h1>
-<% @imgur["data"].each do |x|%>
-  <img src='<%= x["link"] %>'></img>
-<% end %>
-
+<h1>SOUNDCLOUD</h1>
 <p>
-  The time is now: <%= Time.now %>
+  <% @soundc.each do |x| %>
+<%= x['embedhtml'].html_safe %>
+  <% end %>
 </p>
