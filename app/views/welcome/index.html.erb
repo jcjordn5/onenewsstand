@@ -24,7 +24,6 @@
 <% @nytimes.each do |x| %>
 <dl>
   <dt><a href ="<%= x['url'] %>"><%= x["title"] %></a></dt>
-  <dd><%= x["byline"] %></dd>
   <dd><%= x["abstract"] %></dd>
   <dd><%= x["published_date"]%></dd>
 </dl>
@@ -57,6 +56,11 @@
 <h1>YOUTUBE</h1>
 <% @yt["items"].each do |x| %>
 <%= x["player"]["embedHtml"].html_safe%>
+<% end %>
+
+<h1>IMGUR</h1>
+<% @imgur["data"].each do |x|%>
+  <img src='<%= x["link"] %>'></img>
 <% end %>
 
 <p>
