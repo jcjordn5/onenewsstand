@@ -1,0 +1,84 @@
+<h1>Tweets</h1>
+
+<ul>
+  <% TwitterApi.trending_tweets.to_h[:trends].each do |tweet| %>
+  <li>
+
+<a href = "<%=tweet[:url]%>" > <%=tweet[:name]%> </a>
+  </li>
+  <% end %>
+</ul>
+</br>
+
+<h1>IMGUR</h1>
+<% @imgur["data"].each do |x|%>
+  <img src='<%= x["link"] %>'></img>
+<% end %>
+
+
+<h1>NY TIMES</h1>
+<% @nytimes.each do |x| %>
+<dl>
+  <dt><a href ="<%= x['url'] %>"><%= x["title"] %></a></dt>
+  <dd><%= x["abstract"] %></dd>
+  <dd><%= x["published_date"]%></dd>
+</dl>
+<% end %>
+
+<h1>THE GUARDIAN</h1>
+<% @guardian.each do |x| %>
+<dl>
+  <dt><a href ="<%= x['webUrl'] %>"><%= x["webTitle"] %></a></dt>
+  <dd><%= x["webPublicationDate"] %></dd>
+</dl>
+<% end %>
+
+<h1>NPR</h1>
+<% @nprjson['list']['story'].each do |x| %>
+<dl>
+  <dt><a href = "<%=x['link'][2]['$text']%>"> <%= x['title']['$text']%></a> </dt>
+  <dd><%= x['teaser']["$text"] %></dd>
+</dl>
+<% end %>
+
+</br>
+
+<h1>USA Today</h1>
+<% @usatoday['stories'].each do |x| %>
+<dl>
+  <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
+  <dd><%= x['description'] %></dd>
+</dl>
+<% end %>
+
+<h1>YOUTUBE</h1>
+<% @yt["items"].each do |x| %>
+<%= x["player"]["embedHtml"].html_safe%>
+<% end %>
+
+<h1>Sounds</h1>
+
+<p>
+  <% SoundcloudApi.soundcloudwidget.each do |x| %>
+<%= x.html_safe %>
+  <% end %>
+</p>
+
+
+<h1>Tweets</h1>
+
+<ul>
+  <% TwitterApi.trending_tweets.to_h[:trends].each do |tweet| %>
+  <li>
+
+<a href = "<%=tweet[:url]%>" > <%=tweet[:name]%> </a>
+  </li>
+  <% end %>
+</ul>
+
+</br>
+
+
+<p>
+  The time is now: <%= Time.now %>
+</p>

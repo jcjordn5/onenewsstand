@@ -11,8 +11,8 @@ end
 
 def self.client
 @client ||= Twitter::REST::Client.new do |config|
-  config.consumer_key        = "7sx0NwvxsoXbga1FpiRhvXzKK"
-  config.consumer_secret     = "FJvjmzIT5cZSaZYt6ZOtSdIR9d70Gib5B0Vc8QrdIXAsCab7QV"
+  config.consumer_key        = "VfUgu5BvtP5rb9DJoRet03E7L"
+  config.consumer_secret     = "RL7dc2RvfjicxfWPvPnkpNszUxZ4wINLWEJ5ufsYSVhrdKTKGj"
     end
   end
 end

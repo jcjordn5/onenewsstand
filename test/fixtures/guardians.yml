@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weburl: MyString
+  webtitle: MyString
+  webPublicationDate: MyString
+
+two:
+  weburl: MyString
+  webtitle: MyString
+  webPublicationDate: MyString

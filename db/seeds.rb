@@ -5,3 +5,36 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@nyt = HTTParty.get('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=30ffb766789e445b73dffdb5f1e23483:6:72504693').to_h["results"]
+@nyt.each do |x|
+Nyt.create(url: x['url'], title: x['title'], abstract: x['abstract'], published_date: ['published_date'])
+end
+
+@guardian = HTTParty.get('https://content.guardianapis.com/search?q=politics&api-key=dc2tmawrmyg2xesbwr6q68d4').to_h["response"]["results"]
+@guardian.each do |x|
+Guardian.create(weburl: x['webUrl'], webtitle: x['webTitle'], webPublicationDate: x['webPublicationDate'])
+end
+
+@npr = JSON.parse(HTTParty.get('https://api.npr.org/query?id=1056&fields=title,summary&output=JSON&apiKey=MDE5ODgxNTI1MDE0MzY5MTI3NDRkOWNhNQ001').to_s)['list']['story']
+@npr.each do |x|
+Npr.create(link: x['link'][2]['$text'], title: x['title']['$text'], teaser: x['teaser']["$text"])
+end
+
+@usa = HTTParty.get('http://api.usatoday.com/open/articles/topnews/home?count=10&days=1&page=1&encoding=json&api_key=w8g6c8xmqhysh47tejek3yce')
+@usa['stories'].each do |x|
+Usa.create(link: x['link'], title: x['title'], description: x['description'])
+end
+
+@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=10&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
+@youtube["items"].each do |x|
+Youtube.create(embedhtml: x["player"]["embedHtml"])
+end
+
+SoundcloudApi.soundcloudwidget.each do |x|
+Soundc.create(embedhtml: x)
+end
+
+TwitterApi.trending_tweets.to_h[:trends].each do |x|
+Twit.create(url: x[:url], name: x[:name])
+end
