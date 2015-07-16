@@ -7,16 +7,7 @@
 </p>
 
 
-<h1>Tweets</h1>
 
-<ul>
-  <% TwitterApi.trending_tweets.to_h[:trends].each do |tweet| %>
-  <li>
-
-<a href = "<%=tweet[:url]%>" > <%=tweet[:name]%> </a>
-  </li>
-  <% end %>
-</ul>
 
 </br>
 
@@ -59,9 +50,7 @@
 <% end %>
 
 <h1>IMGUR</h1>
-<% @imgur["data"].each do |x|%>
-  <img src='<%= x["link"] %>'></img>
-<% end %>
+<%= @imgur %>
 
 <p>
   The time is now: <%= Time.now %>

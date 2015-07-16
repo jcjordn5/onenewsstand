@@ -1,0 +1,10 @@
+<h1>Tweets</h1>
+
+<ul>
+  <% TwitterApi.trending_tweets.to_h[:trends].each do |tweet| %>
+  <li>
+
+<a href = "<%=tweet[:url]%>" > <%=tweet[:name]%> </a>
+  </li>
+  <% end %>
+</ul>
