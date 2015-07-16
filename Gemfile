@@ -43,5 +43,6 @@ group :development, :test do
 
   gem 'twitter'
   gem 'dotenv-rails'
+  gem 'soundcloud'
 
 end

@@ -6,5 +6,6 @@ class WelcomeController < ApplicationController
    @npr = HTTParty.get('https://api.npr.org/query?id=1056&fields=title,summary&output=JSON&apiKey=MDE5ODgxNTI1MDE0MzY5MTI3NDRkOWNhNQ001').to_s
    @nprjson = JSON.parse(@npr)
    @yt = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=10&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
+
 end
 end
