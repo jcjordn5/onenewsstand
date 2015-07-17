@@ -2,11 +2,13 @@
 
 <div class= "row">
     <div class="col s5">
-      <%@youtube["embedhtml"].sub 640, 400%>
-      <%@youtube["embedhtml"].sub 480, 214%>
-      <%= @youtube.first['embedhtml'].html_safe%>
+        <div class='video-container'>
+        <%= @youtube.first['embedhtml'].html_safe%>
+      </div>
       <% @youtube[1..2].each do |x| %>
-      <iframe width= 400px; height= 214px; src= "http://www.youtube.com/embed/<%= x['id']%>"</iframe>
+        <div class='video-container'>
+          <%= x['embedhtml'].html_safe%>
+      </div>
       <% end %>
     </div>
 
