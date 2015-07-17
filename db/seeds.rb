@@ -34,6 +34,7 @@ end
 @instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?client_id=1215ea56756e4a6eb95a882e1af70efb')
 @instagram['data'].each do |x|
 Instagram.create(url: x['images']['standard_resolution']['url'])
+end
 
 
 SoundcloudApi.soundcloudwidget.each do |x|
