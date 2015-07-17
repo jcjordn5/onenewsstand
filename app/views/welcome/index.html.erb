@@ -1,14 +1,9 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = '/app/assets/javascripts/application.js'> </script>
 
-<h1>Tweets</h1>
-<ul>
-  <% @twit.each do |x| %>
-  <li>
-<a href = "<%=x[:url]%>" > <%=x[:name]%> </a>
-  </li>
-  <% end %>
-</ul>
-</br>
+<% @instagram.each do |x|%>
+<img src='<%= x['url'] %>'></img>
+<% end %>
 
 <h1>NY TIMES</h1>
 <% @nyt.each do |x| %>
@@ -47,11 +42,5 @@
 <% @youtube.each do |x| %>
 <%= x['embedhtml'].html_safe%>
 <% end %>
->>>>>>> niles
 
-<h1>SOUNDCLOUD</h1>
-<p>
-  <% @soundc.each do |x| %>
-<%= x['embedhtml'].html_safe %>
-  <% end %>
-</p>
+<h1>YOUTUBE</h1>

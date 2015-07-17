@@ -14,5 +14,13 @@
 //= require jquery_ujs
 //= require_tree .
 
-
 console.log("hi");
+
+$.ajax({
+    url: 'https://api.imgur.com/3/gallery.json',
+    headers: {
+        'Authorization': 'Client-ID 128a302fdff45ec'
+    },
+    type: 'GET',
+    success: function(data) { console.log(data); }
+});

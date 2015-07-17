@@ -26,9 +26,14 @@ end
 Usa.create(link: x['link'], title: x['title'], description: x['description'])
 end
 
-@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=10&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
-@youtube["items"].each do |x|
+@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=3&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
+@youtube['items'].each do |x|
 Youtube.create(embedhtml: x["player"]["embedHtml"])
+end
+
+@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?client_id=1215ea56756e4a6eb95a882e1af70efb')
+@instagram['data'].each do |x|
+Instagram.create(url: x['images']['standard_resolution']['url'])
 end
 
 SoundcloudApi.soundcloudwidget.each do |x|
