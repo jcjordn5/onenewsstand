@@ -12,68 +12,33 @@
 </p>
 <%end%>
 
-<h1>YOUTUBE</h1>
-  <%@youtube.each do |x| %>
-  <p>
-    <%= x['youtubeid']%>
-</p>
-<%end%>
-
-<% @instagram.each do |x|%>
-<img src='<%= x['url'] %>'></img>
-<% end %>
-
 <div class= "row">
-    <div class="col s5">
-      <%= @youtube.first['youtubeid'].html_safe%>
-        <div class='video-container'>
-        <%= @youtube.first['youtubeid'].html_safe%>
+    <div class="col s5 buff">
+      <div class="video-container">
+        <iframe src="http://www.youtube.com/embed/<%= @youtube.first['youtubeid']%>" ></iframe>
       </div>
       <% @youtube[1..2].each do |x| %>
-        <div class='video-container'>
-          <%= x['youtubeid'].html_safe%>
-      </div>
+        <div class="video-container" style="max-width:60%; max-height:50%; margin: 15px 0px;">
+          <iframe src="http://www.youtube.com/embed/<%= x['youtubeid']%>" ></iframe>
+        </div>
       <% end %>
     </div>
 
     <div class="col s3">
     </br>
     <div id="col2">
-      <h1 id='headlines'>HEADLINES</h1>
+      <h1 id="headlines" class="z-depth-2">HEADLINES</h1>
         <div id= "wrapper">
-          <% @nyt.each do |x| %>
-            <p class="headline"><a class="headlinelink"href ="<%= x['url'] %>"><%= x['title'] %></a></p>
-            <p class="body-ar"><%= x["abstract"] %></p>
-          <% end %>
-
-          <% @guardian.each do |x| %>
-            <p class="body-ar"><a class="headlinelink"href ="<%= x['weburl'] %>"><%= x["webtitle"] %></a></p>
-            <p class="body-ar"><%= x["webPublicationDate"] %></p>
-          <% end %>
-
-          <% @npr.each do |x| %>
+          <% @npr[0..3].each do |x| %>
             <p class="headline"><a class="headlinelink"href = "<%=x['link']%>"> <%= x['title']%></a> </p>
-            <p class="body-ar"><%= x['teaser']%></p>
-          <% end %>
-
-<h1>USA Today</h1>
-<% @usa.each do |x| %>
-<dl>
-  <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
-  <dd><%= x['description'] %></dd>
-</dl>
-<% end %>
-=======
-          <% @usa.each do |x| %>
-            <p class="headline"><a class="headlinelink"href = "<%=x['link']%>"> <%= x['title']%></a> </p>
-            <p class="body-ar"><%= x['description'] %></p>
+            <p class="body-ar"><%= x['teaser'].html_safe%></p>
           <% end %>
         </div>
       </div>
     </div>
 <div class="col s3">
   <div class="phatty"></div>
-    <h1 id= "tweet">#TRENDING</h1>
+    <h1 class= "section">#TRENDING</h1>
       <div id="tweetbox">
         <ul>
           <% @twit.each do |x| %>
@@ -85,14 +50,20 @@
     </div>
   </div>
 </div>
+</div>
 <div class= "row">
     <div class="col s6">
-      <h1>SOUNDCLOUD</h1>
+      <div class="phatty"></div>
+        <h1 class= "section">NEW TRACKS</h1>
       <p>
         <% @soundc.each do |x| %>
-      <%= x['embedhtml'].html_safe %>
+          <%= x['embedhtml'].html_safe %>
         <% end %>
       </p>
   </div>
+  <div class="col s6">
+    <% @instagram[0..11].each do |x|%>
+      <img class="materialboxed" width="200" height="200" src='<%= x['url'] %>'></img>
+    <% end %>
+  </div>
 </div>
->>>>>>> jcjordan
