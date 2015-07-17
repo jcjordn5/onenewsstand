@@ -17,7 +17,7 @@
     <div id="col2">
       <h1 id="headlines" class="z-depth-2">HEADLINES</h1>
         <div id= "wrapper">
-          <%@bing.each do |x| %>
+          <%@bing[0..3].each do |x| %>
           <a class="headline" href = "<%=x[:url]%>" > <%=x['title']%> </a>
               <p class="body-ar"><%= x['source']%></p>
               <p class="body-ar"><%= x['description']%></p>
