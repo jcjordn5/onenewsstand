@@ -31,10 +31,15 @@ end
 Youtube.create(youtubeid: x['id'])
 end
 
-@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?client_id=1215ea56756e4a6eb95a882e1af70efb')
+@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id=1215ea56756e4a6eb95a882e1af70efb')
 @instagram['data'].each do |x|
 Instagram.create(url: x['images']['standard_resolution']['url'])
+end
 
+@bing = HTTParty.get('https://x:LwN5nacR86QhhCy9b7pPUQVe0qwPmoptGivdKAUbi4o@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27world%20news%27&$format=json')
+@bing['d']['results'].each do |x|
+Bing.create(title: x['Title'], url: x['Url'], source: x['Source'], description: x['Description'], date: x['Date'])
+end
 
 SoundcloudApi.soundcloudwidget.each do |x|
 Soundc.create(embedhtml: x)

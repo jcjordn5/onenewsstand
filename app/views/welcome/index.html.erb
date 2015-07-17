@@ -1,6 +1,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = '/app/assets/javascripts/application.js'> </script>
 
+<h1>bing</h1>
+<%@bing.each do |x| %>
+<p>
+  <%= x['title']%>
+    <%= x['url']%>
+      <%= x['source']%>
+        <%= x['description']%>
+          <%= x['date']%>
+</p>
+<%end%>
 
 <h1>YOUTUBE</h1>
   <%@youtube.each do |x| %>
