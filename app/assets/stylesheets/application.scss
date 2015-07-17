@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Lora:700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
  @import "materialize/components/color";
 $primary-color: #3B4142 !default;
@@ -52,11 +53,63 @@ $primary-color: #3B4142 !default;
         color: rgb(0,144,255);
         font-size: 12px;
       }
+    a {
+      color:#3B4142;
+      transition: all .25s ease;
+    }
+
+    a:hover {
+      color:#55ACEE;
+    }
+    .tweetlink {
+      font-size:18px;
+    }
+
 #session {
   padding-left:60px;
-  font-size: 30px;
+  padding-top: 11px;
+  font-size: 50px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
+  height:88px;
+
+}
+#col2 {
+  border: 3px solid #3B4142;
+}
+.phatty {
+  border: 3px solid #FF4400;
+  width: 10%;
+  margin-top: 16px;
+  position: absolute;
+  margin-top: 22px;
+}
+#tweet {
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+#headlines {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  color: #F5FAFC;
+  background-color: #3B4142;
+  padding: 10px;
+  margin-top: 0px;
+  text-align:center;
+}
+#wrapper {
+  padding: 10px;
+  padding-top: 0px;
+}
+#tweetbox {
+  background-color: #F5FAFC;
+}
+.headline {
+  font-family: 'Lora', serif;
+  font-weight:700;
+  text-align:center;
 }
 .emph {
   color: #FF4400;
@@ -64,13 +117,20 @@ $primary-color: #3B4142 !default;
 .right {
   float: right;
   padding-right:60px;
+  margin-top: -18px;
+margin-bottom: 4px;
 }
 .log {
   padding-top: 0;
   border: 1px solid #3B4142;
-  transition: all .5s ease;
+  transition: all .25s ease;
   font-size: 12px;
   padding: 5px;
+}
+.body-ar {
+  font-family: 'Lora', serif;
+  text-align:center;
+  font-size:12px;
 }
 .log:hover {
   color:#55ACEE;

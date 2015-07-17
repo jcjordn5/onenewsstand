@@ -1,6 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = '/app/assets/javascripts/application.js'> </script>
 
+
 <h1>YOUTUBE</h1>
   <%@youtube.each do |x| %>
   <p>
@@ -12,30 +13,33 @@
 <img src='<%= x['url'] %>'></img>
 <% end %>
 
-<h1>NY TIMES</h1>
-<% @nyt.each do |x| %>
-<dl>
-  <dt><a href ="<%= x['url'] %>"><%= x['title'] %></a></dt>
-  <dd><%= x["abstract"] %></dd>
-  <dd><%= x["published_date"]%></dd>
-</dl>
-<% end %>
+<div class= "row">
+    <div class="col s5">
+      <%= @youtube.first['youtubeid'].html_safe%>
+      <% @youtube[1..2].each do |x| %>
+      <iframe width= 400px; height= 214px; src= "http://www.youtube.com/embed/<%= x['id']%>"</iframe>
+      <% end %>
+    </div>
 
-<h1>THE GUARDIAN</h1>
-<% @guardian.each do |x| %>
-<dl>
-  <dt><a href ="<%= x['weburl'] %>"><%= x["webtitle"] %></a></dt>
-  <dd><%= x["webPublicationDate"] %></dd>
-</dl>
-<% end %>
+    <div class="col s3">
+    </br>
+    <div id="col2">
+      <h1 id='headlines'>HEADLINES</h1>
+        <div id= "wrapper">
+          <% @nyt.each do |x| %>
+            <p class="headline"><a class="headlinelink"href ="<%= x['url'] %>"><%= x['title'] %></a></p>
+            <p class="body-ar"><%= x["abstract"] %></p>
+          <% end %>
 
-<h1>NPR</h1>
-<% @npr.each do |x| %>
-<dl>
-  <dt><a href = "<%=x['link']%>"> <%= x['title']%></a> </dt>
-  <dd><%= x['teaser']%></dd>
-</dl>
-<% end %>
+          <% @guardian.each do |x| %>
+            <p class="body-ar"><a class="headlinelink"href ="<%= x['weburl'] %>"><%= x["webtitle"] %></a></p>
+            <p class="body-ar"><%= x["webPublicationDate"] %></p>
+          <% end %>
+
+          <% @npr.each do |x| %>
+            <p class="headline"><a class="headlinelink"href = "<%=x['link']%>"> <%= x['title']%></a> </p>
+            <p class="body-ar"><%= x['teaser']%></p>
+          <% end %>
 
 <h1>USA Today</h1>
 <% @usa.each do |x| %>
@@ -44,3 +48,36 @@
   <dd><%= x['description'] %></dd>
 </dl>
 <% end %>
+=======
+          <% @usa.each do |x| %>
+            <p class="headline"><a class="headlinelink"href = "<%=x['link']%>"> <%= x['title']%></a> </p>
+            <p class="body-ar"><%= x['description'] %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+<div class="col s3">
+  <div class="phatty"></div>
+    <h1 id= "tweet">#TRENDING</h1>
+      <div id="tweetbox">
+        <ul>
+          <% @twit.each do |x| %>
+          <li>
+        <a class="helvetica-bold tweetlink" href = "<%=x[:url]%>" > <%=x[:name]%> </a>
+          </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class= "row">
+    <div class="col s6">
+      <h1>SOUNDCLOUD</h1>
+      <p>
+        <% @soundc.each do |x| %>
+      <%= x['embedhtml'].html_safe %>
+        <% end %>
+      </p>
+  </div>
+</div>
+>>>>>>> jcjordan
