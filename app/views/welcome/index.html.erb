@@ -16,8 +16,13 @@
 <div class= "row">
     <div class="col s5">
       <%= @youtube.first['youtubeid'].html_safe%>
+        <div class='video-container'>
+        <%= @youtube.first['youtubeid'].html_safe%>
+      </div>
       <% @youtube[1..2].each do |x| %>
-      <iframe width= 400px; height= 214px; src= "http://www.youtube.com/embed/<%= x['id']%>"</iframe>
+        <div class='video-container'>
+          <%= x['youtubeid'].html_safe%>
+      </div>
       <% end %>
     </div>
 
