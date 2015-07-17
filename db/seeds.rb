@@ -28,7 +28,7 @@ end
 
 @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=3&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
 @youtube['items'].each do |x|
-Youtube.create(embedhtml: x["player"]["embedHtml"])
+Youtube.create(youtubeid: x['id'])
 end
 
 @instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?client_id=1215ea56756e4a6eb95a882e1af70efb')

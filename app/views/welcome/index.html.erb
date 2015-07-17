@@ -1,6 +1,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = '/app/assets/javascripts/application.js'> </script>
 
+<h1>YOUTUBE</h1>
+  <%@youtube.each do |x| %>
+  <p>
+    <%= x['youtubeid']%>
+</p>
+<%end%>
+
 <% @instagram.each do |x|%>
 <img src='<%= x['url'] %>'></img>
 <% end %>
@@ -37,10 +44,3 @@
   <dd><%= x['description'] %></dd>
 </dl>
 <% end %>
-
-<h1>YOUTUBE</h1>
-<% @youtube.each do |x| %>
-<%= x['embedhtml'].html_safe%>
-<% end %>
-
-<h1>YOUTUBE</h1>

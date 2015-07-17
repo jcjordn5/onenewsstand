@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
   #headers = { Authorization: "Client-ID 449d68ec45b2592"}
   #@imgur = HTTParty.get('https://api.imgur.com/3/gallery.json', :header => headers)
 
+  # @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=3&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
   @guardian = Guardian.all
   @nyt = Nyt.all
   @usa = Usa.all
