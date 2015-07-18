@@ -53,7 +53,7 @@
     <div class="phatty"></div>
       <h1 class= "section">PHOTOS</h1>
       <div id="materialbox">
-        <div class="material-placeholder">
+        <div id="photo-gallery" class="material-placeholder">
       <% @instagram[0..11].each do |x|%>
           <img class="materialboxed" width="200" src='<%= x['url'] %>'></img>
           <% end %>
