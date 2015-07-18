@@ -74,9 +74,7 @@ $primary-color: #3B4142 !default;
   height:88px;
 
 }
-#col2 {
-  border: 3px solid #3B4142;
-}
+
 .buff {
     margin-top: 21px;
 }
@@ -97,10 +95,13 @@ $primary-color: #3B4142 !default;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   color: #F5FAFC;
-  background-color: #3B4142;
+  background-color: #FF4400;
   padding: 10px;
   margin-top: 0px;
   text-align:center;
+}
+#col2 {
+  border: 3px solid #FF4400;
 }
 #wrapper {
   padding: 10px;

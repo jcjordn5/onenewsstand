@@ -7,18 +7,18 @@
       </div>
       <% @youtube[1..4].each do |x| %>
         <div class="video-container"   style="width:250px; height:200px; display:inline-block;  margin: 15px 0px;">
-          <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&showinfo=1&controls=1" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&showinfo=1&controls=0" allowfullscreen></iframe>
         </div>
       <% end %>
     </div>
 
-    <div class="col s3">
+    <div class="col s4">
     </br>
     <div id="col2">
-      <h1 id="headlines" class="z-depth-2">HEADLINES</h1>
+      <h1 id="headlines" >HEADLINES</h1>
         <div id= "wrapper">
           <%@bing[0..3].each do |x| %>
-          <a class="headline" href = "<%=x[:url]%>" > <%=x['title']%> </a>
+              <p class="headline"><a href ="<%=x[:url]%>" > <%=x['title']%></a></p>
               <p class="body-ar"><%= x['source']%></p>
               <p class="body-ar"><%= x['description']%></p>
               <p class="body-ar"><%= x['date']%></p>
