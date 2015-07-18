@@ -1,7 +1,7 @@
 class TwitterApi
 
 def self.trending_tweets
-    client.trends(id=1, options = {})
+    client.trends(id=23424977, options = {})
 end
 
 def self.our_public_tweets

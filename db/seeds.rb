@@ -26,7 +26,7 @@ end
 Usa.create(link: x['link'], title: x['title'], description: x['description'])
 end
 
-@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=3&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
+@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
 @youtube['items'].each do |x|
 Youtube.create(youtubeid: x['id'])
 end

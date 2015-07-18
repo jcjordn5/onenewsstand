@@ -19,4 +19,5 @@ class WelcomeController < ApplicationController
   @instagram = Instagram.all
 
 end
+
 end
