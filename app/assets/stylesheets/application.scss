@@ -39,6 +39,9 @@ $primary-color: #3B4142 !default;
       font-weight: 700;
       font-size:18px;
     }
+    iframe {
+      border:none;
+    }
 
 #session {
   padding-left:60px;
@@ -102,6 +105,9 @@ $primary-color: #3B4142 !default;
   font-family: 'Lora', serif;
   font-weight:700;
   text-align:center;
+}
+.depad {
+  margin: -30px;
 }
 .emph {
   color: #FF4400;

@@ -2,12 +2,11 @@
     <div class="col s5">
       <div class="phatty"></div>
         <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Videos on The Hour">VIDEOS</h1>
-      <h1><%= @youtube.first['title']%></h1>
       <div id="vid-box" class="buff">
       <% @youtube.each do |x| %>
       <p><%=x['title']%></p>
         <div class="video-container">
-          <iframe style="border:none" src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
         </div>
       <% end %>
     </div>
