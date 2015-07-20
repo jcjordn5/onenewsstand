@@ -151,13 +151,13 @@ margin-bottom: 4px;
 .log:hover {
   color:#55ACEE;
 }
-// #photo-gallery {
-//   height:400px;
-//   width:300px;
-//  overflow:auto;
-//   display:flex;
-//   flex-flow: row wrap;
-// }
+#photo-gallery {
+ //  height:400px;
+ //  width:300px;
+ // overflow:auto;
+  display:flex;
+  flex-flow: row wrap;
+}
 .insta-info {
   position: relative;
   width: 50px;
