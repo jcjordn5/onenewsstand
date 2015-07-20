@@ -94,8 +94,9 @@ $primary-color: #3B4142 !default;
   background-color: #F5FAFC;
 }
 #photobox {
-  height:600px;
-  overflow: scroll;
+  height:300px;
+  width: 300px;
+ overflow:auto;
 }
 #vid-box {
   height: 500px;
@@ -138,6 +139,9 @@ margin-bottom: 4px;
   color:#55ACEE;
 }
 #photo-gallery {
+  height:400px;
+  width:300px;
+ overflow:auto;
   display:flex;
   flex-flow: row wrap;
 }
