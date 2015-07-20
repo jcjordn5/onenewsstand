@@ -59,7 +59,7 @@
       <div id="materialbox">
         <div id="photo-gallery" class="material-placeholder">
       <% @instagram[0..11].each do |x|%>
-          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
+          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'> <%=x['username']%> </img>
           <% end %>
         </div>
     </div>
