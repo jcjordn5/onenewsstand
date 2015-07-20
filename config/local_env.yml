@@ -1,7 +1,6 @@
-  secret_key_base: 862f43e3382211e8634370944b6175990a16ce92b9a09d0881a11b05f50fd876c1cd5cf1915ab576b4d74286b6872c49f361818479a18eb1ce67055e8f397650
-  BingKey: LwN5nacR86QhhCy9b7pPUQVe0qwPmoptGivdKAUbi4o
-  SoundCloudKey: a94c27c1b7b5fbc10ddf13f53d57fbea
-  TwitterKey: VfUgu5BvtP5rb9DJoRet03E7L
-  TwitterSecret: RL7dc2RvfjicxfWPvPnkpNszUxZ4wINLWEJ5ufsYSVhrdKTKGj
-  YouTubeKey: AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI
-  InstagramKey: 1215ea56756e4a6eb95a882e1af70efb
+BingKey: LwN5nacR86QhhCy9b7pPUQVe0qwPmoptGivdKAUbi4o
+SoundCloudKey: a94c27c1b7b5fbc10ddf13f53d57fbea
+TwitterKey: VfUgu5BvtP5rb9DJoRet03E7L
+TwitterSecret: RL7dc2RvfjicxfWPvPnkpNszUxZ4wINLWEJ5ufsYSVhrdKTKGj
+YouTubeKey: AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI
+InstagramKey: 1215ea56756e4a6eb95a882e1af70efb
