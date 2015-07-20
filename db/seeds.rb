@@ -28,15 +28,15 @@ end
 
 @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
 @youtube['items'].each do |x|
-Youtube.create(youtubeid: x['id'])
+Youtube.create(youtubeid: x['id'], title: x['title'])
 end
 
 @instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id=1215ea56756e4a6eb95a882e1af70efb')
 @instagram['data'].each do |x|
-Instagram.create(url: x['images']['standard_resolution']['url'])
+Instagram.create(url: x['images']['standard_resolution']['url'], username: x['user']['username'], description: x['tags'])
 end
 
-@bing = HTTParty.get('https://x:LwN5nacR86QhhCy9b7pPUQVe0qwPmoptGivdKAUbi4o@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27world%20news%27&$format=json')
+@bing = HTTParty.get('https://x:LwN5nacR86QhhCy9b7pPUQVe0qwPmoptGivdKAUbi4o@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
 @bing['d']['results'].each do |x|
 Bing.create(title: x['Title'], url: x['Url'], source: x['Source'], description: x['Description'], date: x['Date'])
 end

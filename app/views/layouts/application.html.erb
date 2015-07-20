@@ -12,7 +12,7 @@
   <script src = '/app/assets/javascripts/application.js'> </script>
 </head>
 <body>
-<nav  id="session"><span class="emph">ONE</span> NEWS STAND<span class="right"><a class="log avenir-book" href="#">SIGN UP</a><a class="log avenir-book" href="#">LOGIN</a></span></nav>
+<nav  id="session"><span class="emph">ONE</span> NEWS STAND<span class="right"><a class="log avenir-book" href="#"><%= Time.now.strftime("%m/%d/%Y") %></a></span></nav>
 
 <%= yield %>
 <script>
