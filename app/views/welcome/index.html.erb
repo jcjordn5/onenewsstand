@@ -10,7 +10,7 @@
       <% end %>
     </div>
 
-    <div class="col s4">
+    <div class="col s3">
     </br>
     <div id="col2">
       <h1 id="headlines" >HEADLINES</h1>
@@ -26,12 +26,12 @@
     </div>
 <div class="col s3">
   <div class="phatty"></div>
-    <h1 class= "section">#TRENDING</h1>
+    <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
       <div id="tweetbox">
         <ul>
           <% @twit.each do |x| %>
           <li>
-        <a class="helvetica-bold tweetlink" href = "<%=x[:url]%>" > <%=x[:name]%> </a>
+        <a class= "tweetlink" href = "<%=x[:url]%>" > <%=x[:name]%> </a>
           </li>
           <% end %>
         </ul>
@@ -42,7 +42,7 @@
 <div class= "row">
     <div class="col s6">
       <div class="phatty"></div>
-        <h1 class= "section">NEW TRACKS</h1>
+        <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
       <p>
         <% @soundc.each do |x| %>
           <%= x['embedhtml'].html_safe %>
@@ -51,7 +51,7 @@
   </div>
   <div class="col s6">
     <div class="phatty"></div>
-      <h1 class= "section" >PHOTOS</h1>
+      <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">PHOTOS</h1>
       <div id="materialbox">
         <div id="photo-gallery" class="material-placeholder">
       <% @instagram[0..11].each do |x|%>
