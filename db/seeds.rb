@@ -6,13 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-<<<<<<< HEAD
-@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
-=======
-@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key='+ENV['YouTubeKey']).to_h
->>>>>>> 596346d221dd7ce544bd13cdd8211ddaae5ab0da
+@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=7&key='+ENV['YouTubeKey']).to_h
 @youtube['items'].each do |x|
-Youtube.create(youtubeid: x['id'], title: x['title'])
+Youtube.create(youtubeid: x['id'], title: x['snippet']['title'])
 end
 
 @instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id='+ENV['InstagramKey'])
