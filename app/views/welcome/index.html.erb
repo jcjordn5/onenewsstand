@@ -63,10 +63,11 @@
         <div id="photo-gallery" class="material-placeholder">
           <% @instagram[0..11].each do |x|%>
           <div class = 'insta-holder'>
-          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
+          <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
         <div class = 'insta-info'>
           <a href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a>
-          <%x['description'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
+          <div> <%=x['description']%></div>
+          <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
           <div>
             #<%= x %>
           </div>

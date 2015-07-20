@@ -13,7 +13,7 @@ end
 
 @instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id='+ENV['InstagramKey'])
 @instagram['data'].each do |x|
-Instagram.create(url: x['images']['standard_resolution']['url'], username: x['user']['username'], description: x['tags'])
+Instagram.create(url: x['images']['standard_resolution']['url'], username: x['user']['username'], tags: x['tags'], description: x['caption']['text'])
 end
 
 @bing = HTTParty.get('https://x:'+ENV['BingKey']+'@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
