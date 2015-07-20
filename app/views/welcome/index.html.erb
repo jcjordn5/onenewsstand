@@ -6,7 +6,7 @@
       <% @youtube.each do |x| %>
       <p><%=x['title']%></p>
         <div class="video-container">
-          <iframe style="border:none" src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
         </div>
       <% end %>
     </div>
