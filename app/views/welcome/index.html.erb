@@ -5,7 +5,7 @@
       <div id="vid-box" class="buff">
       <% @youtube.each do |x| %>
       <p><%=x['title']%></p>
-        <div class="video-container">
+        <div class="video-container depad">
           <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
         </div>
       <% end %>
@@ -54,14 +54,16 @@
       </div>
   </div>
   <div class="col s8">
-    <div class="phatty"></div>
-      <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">PHOTOS</h1>
-      <div id="materialbox">
-        <div id="photo-gallery" class="material-placeholder">
-      <% @instagram[0..11].each do |x|%>
-          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
-          <% end %>
+      <div class="phatty"></div>
+        <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">PHOTOS</h1>
+          <div id="photobox">
+            <div id="materialbox">
+              <div id="photo-gallery" class="material-placeholder">
+              <% @instagram.each do |x|%>
+              <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
+              <% end %>
+            </div>
         </div>
+      </div>
     </div>
-  </div>
   </div>

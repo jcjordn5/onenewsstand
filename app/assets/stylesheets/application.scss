@@ -93,6 +93,10 @@ $primary-color: #3B4142 !default;
   margin-top: -40px;
   background-color: #F5FAFC;
 }
+#photobox {
+  height:600px;
+  overflow: scroll;
+}
 #vid-box {
   height: 500px;
   overflow: scroll;
@@ -107,7 +111,7 @@ $primary-color: #3B4142 !default;
   text-align:center;
 }
 .depad {
-  margin: -30px;
+  margin: -10px;
 }
 .emph {
   color: #FF4400;

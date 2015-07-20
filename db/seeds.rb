@@ -11,7 +11,7 @@
 Youtube.create(youtubeid: x['id'], title: x['snippet']['title'])
 end
 
-@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id='+ENV['InstagramKey'])
+@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=36&client_id='+ENV['InstagramKey'])
 @instagram['data'].each do |x|
 Instagram.create(url: x['images']['standard_resolution']['url'], username: x['user']['username'], description: x['tags'])
 end
