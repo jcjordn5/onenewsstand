@@ -6,17 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key='+Rails.application.secrets.YouTubeKey).to_h
+@youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=7&key='+ENV['YouTubeKey']).to_h
 @youtube['items'].each do |x|
 Youtube.create(youtubeid: x['id'], title: x['title'])
 end
 
-@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id='+Rails.application.secrets.InstagramKey)
+@instagram = HTTParty.get('https://api.instagram.com/v1/media/popular?count=12&client_id='+ENV['InstagramKey'])
 @instagram['data'].each do |x|
 Instagram.create(url: x['images']['standard_resolution']['url'], username: x['user']['username'], description: x['tags'])
 end
 
-@bing = HTTParty.get('https://x:'+Rails.application.secrets.BingKey+'@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
+@bing = HTTParty.get('https://x:'+ENV['BingKey']+'@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
 @bing['d']['results'].each do |x|
 Bing.create(title: x['Title'], url: x['Url'], source: x['Source'], description: x['Description'], date: x['Date'])
 end

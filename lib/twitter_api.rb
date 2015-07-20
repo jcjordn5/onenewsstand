@@ -11,8 +11,8 @@ end
 
 def self.client
 @client ||= Twitter::REST::Client.new do |config|
-  config.consumer_key        = Rails.application.secrets.TwitterKey
-  config.consumer_secret     = Rails.application.secrets.TwitterSecret
+  config.consumer_key        = ENV['TwitterKey']
+  config.consumer_secret     = ENV['TwitterSecret']
     end
   end
 end
