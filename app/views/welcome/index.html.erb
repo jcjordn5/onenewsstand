@@ -2,7 +2,6 @@
     <div class="col s5">
       <div class="phatty"></div>
         <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Videos on The Hour">VIDEOS</h1>
-      <h1><%= @youtube.first['title']%></h1>
       <div id="vid-box" class="buff">
       <% @youtube.each do |x| %>
       <p><%=x['title']%></p>
@@ -20,7 +19,7 @@
         <div id= "wrapper">
           <div id="news-box">
           <%@bing.each do |x| %>
-              <p class="headline"><a href ="<%=x[:url]%>" > <%=x['title']%></a></p>
+              <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title']%></a></p>
               <p class="body-ar"><%= x['source']%></p>
               <p class="body-ar"><%= x['description']%></p>
               <p class="body-ar"><%= x['date']%></p>
@@ -36,7 +35,7 @@
         <ul>
           <% @twit.each do |x| %>
           <li>
-        <a class= "tweetlink" href = "<%=x[:url]%>" > <%=x[:name]%> </a>
+        <a class= "tweetlink" href = "<%=x[:url]%>" target="_blank"> <%=x[:name]%> </a>
           </li>
           <% end %>
         </ul>
