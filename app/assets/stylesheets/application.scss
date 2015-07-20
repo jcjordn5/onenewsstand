@@ -68,7 +68,7 @@ $primary-color: #3B4142 !default;
   font-weight: 700;
 }
 #headlines {
-  display: block;
+  display: inline-block;
   font-size: 35px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
@@ -81,11 +81,24 @@ $primary-color: #3B4142 !default;
 #col2 {
   border: 3px solid #FF4400;
 }
+#col3 {
+  border: 3px solid #FF4400;
+  width: 1000px;
+  height: 10%;
+}
 #news-box{
-  height: 475px;
-  overflow: scroll;
+  width: 5000px;
+  height: 300px;
+}
+.news-content{
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  padding-right: 30px;
+
 }
 #wrapper {
+  overflow: scroll;
   padding: 10px;
   padding-top: 0px;
 }
