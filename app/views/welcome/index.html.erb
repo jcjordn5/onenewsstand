@@ -61,8 +61,18 @@
       <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">PHOTOS</h1>
       <div id="materialbox">
         <div id="photo-gallery" class="material-placeholder">
-      <% @instagram[0..11].each do |x|%>
-          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'> <%=x['username']%> </img>
+          <% @instagram[0..11].each do |x|%>
+          <div class = 'insta-holder'>
+          <img class="materialboxed" data-caption="User: <%=x['username']%> Tags: <%=x['description']%>" width="200" src='<%= x['url'] %>'></img>
+        <div class = 'insta-info'>
+          <a href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a>
+          <%x['description'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
+          <div>
+            #<%= x %>
+          </div>
+          <% end %>
+          </div>
+      </div>
           <% end %>
         </div>
     </div>
