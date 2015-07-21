@@ -1,5 +1,4 @@
 <div class= "row">
-  </br>
 
 <div id="col5">
   <div class="phatty"></div>
@@ -8,8 +7,8 @@
       <div id="news-box">
       <%@bing.each do |x| %>
           <div class = 'news-content'>
+          <p class="source"><%= x['source']%></p>
           <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].upcase%></a></p>
-          <p class="body-ar"><%= x['source']%></p>
           <p class="body-ar"><%= x['description']%></p>
         </div>
       <%end%>

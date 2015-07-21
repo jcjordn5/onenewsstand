@@ -121,15 +121,22 @@ $primary-color: #3B4142 !default;
   overflow: scroll;
 }
 .headline {
-  font-family: 'Lora', serif;
+  font-family:'Droid Sans', sans-serif;
   font-weight:700;
-  text-align:center;
+  text-align:left;
 }
 .depad {
   margin: -10px;
 }
 .emph {
   color: #FF4400;
+}
+.source {
+  font-family:'Droid Sans', sans-serif;
+  font-weight: 400;
+  color:#55ACEE;
+  text-align:left;
+  font-size:12px;
 }
 .right {
   float: right;
@@ -145,8 +152,9 @@ margin-bottom: 4px;
   padding: 5px;
 }
 .body-ar {
-  font-family: 'Lora', serif;
-  text-align:center;
+  font-family:'Droid Sans', sans-serif;
+  font-weight: 400;
+  text-align:left;
   font-size:12px;
 }
 .log:hover {
