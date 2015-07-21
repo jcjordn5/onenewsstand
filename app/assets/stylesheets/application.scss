@@ -14,8 +14,8 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Lora:700);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Passion+One:700);
 @import "materialize/components/color";
 $primary-color: #3B4142 !default;
  @import "materialize";
@@ -35,9 +35,10 @@ $primary-color: #3B4142 !default;
       color:#55ACEE;
     }
     .tweetlink {
-      font-family:'Droid Sans', sans-serif;
+      font-family:'Lato', sans-serif;
       font-weight: 700;
       font-size:18px;
+      line-height:42px;
     }
     iframe {
       border:none;
@@ -47,28 +48,31 @@ $primary-color: #3B4142 !default;
   padding-left:60px;
   padding-top: 11px;
   font-size: 50px;
-  font-family: 'Oswald', sans-serif;
+font-family: 'Passion One', cursive;
   font-weight: 700;
-  height:88px;
+  height:68px;
 }
 
 .buff {
     margin-top: -42px;
 }
 .phatty {
-  border: 7px solid #FF4400;
+  border: 4px solid #FF4400;
   width: 10%;
-  margin-top: 16px;
   position: absolute;
-  margin-top: 22px;
+  margin-top: 30px;
 }
 .section {
+  margin-top: 23px;
   font-size: 50px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
 .subsection {
-  margin-top: -27px;
+  font-family: 'Lato', sans-serif;
+  color: #B6B5B6;
+  font-weight: 300;
+  margin-top: -50px;
   font-size:28px;
 }
 #headlines {
@@ -95,6 +99,10 @@ $primary-color: #3B4142 !default;
   width: 4600px;
   height: 300px;
 }
+.insta-holder {
+  position: relative;
+  width:100%;
+}
 .news-content{
   display: inline-block;
   width: 300px;
@@ -107,6 +115,7 @@ $primary-color: #3B4142 !default;
   overflow: scroll;
   padding: 10px;
   padding-top: 0px;
+  margin-top: -18px;
 }
 #tweetbox {
   margin-top: 29px;
@@ -125,10 +134,27 @@ $primary-color: #3B4142 !default;
   height: 610px;
   overflow: scroll;
 }
+#side-squeezer {
+  margin-left:60px;
+  margin-right:60px;
+}
+.strong {
+  font-family:'Lato', sans-serif;
+  font-weight:700;
+  color:#0A558A;
+}
 .headline {
-  font-family:'Droid Sans', sans-serif;
+  font-family:'Lato', sans-serif;
+  font-size:18px;
+  line-height: 22px;
   font-weight:700;
   text-align:left;
+  margin-top: -14px;
+}
+.insta-info {
+    font-family:'Lato', sans-serif;
+    position: relative;
+    width: 100%;
 }
 .depad {
   margin: -10px;
@@ -137,22 +163,20 @@ $primary-color: #3B4142 !default;
   color: #FF4400;
 }
 .source {
-  font-family:'Droid Sans', sans-serif;
+  margin-top:10px;
+  font-family:inherit;
   font-weight: 400;
+  font-size: 14px;
   color:#55ACEE;
   text-align:left;
-  font-size:12px;
 }
 .secsource {
     color:#55ACEE;
 }
-.subsection {
-  color:#3B4142;
-}
 .right {
   float: right;
   padding-right:60px;
-  margin-top: -18px;
+  margin-top: -21px;
 margin-bottom: 4px;
 }
 .log {
@@ -163,19 +187,16 @@ margin-bottom: 4px;
   padding: 5px;
 }
 .body-ar {
-  font-family:'Droid Sans', sans-serif;
-  font-weight: 400;
+font-family: 'EB Garamond', serif;
+font-weight:400;
   text-align:left;
-  font-size:12px;
+  font-size:15px;
+  line-height:18px;
+  margin-top:-9px;
 }
 .log:hover {
   color:#55ACEE;
 }
 #photo-gallery {
   display:flex;
-  flex-flow: row wrap;
-}
-.insta-info {
-  position: relative;
-  width: 50px;
 }
