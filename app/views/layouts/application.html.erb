@@ -11,15 +11,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src = '/app/assets/javascripts/application.js'> </script>
   <script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "93a028dc-a8a1-4acc-ae99-e65ed1f0a424", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "93a028dc-a8a1-4acc-ae99-e65ed1f0a424", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
-
-<nav  id="session"><span class="emph">ONE</span> NEWS STAND<span style="line-height: 2.05;" class="right"><%= Time.now.strftime("%m/%d/%Y") %></span></nav>
-
-<%= yield %>
-<div class="footer-copyright">
+  <nav id="session"><span class="emph">ONE</span> NEWS STAND <span style="font-size:30px; font-weight:400;" ><%= Time.now.strftime("%m/%d/%Y") %></span></nav>
+  <%= yield %>
+  <div class="footer-copyright">
   <div class="container">
       <div class="col l6 s12">
         <p class="white-text">Copyright 2015</p>
