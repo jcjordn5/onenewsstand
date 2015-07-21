@@ -1,9 +1,9 @@
 <div class= "row">
   </br>
 
-<div class="col">
-<div id="col3">
-  <h1 id="headlines" >HEADLINES</h1>
+<div id="col5">
+  <div class="phatty"></div>
+    <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Stories of the Day">HEADLINES</h1>
     <div id= "wrapper">
       <div id="news-box">
       <%@bing.each do |x| %>
@@ -17,22 +17,8 @@
     </div>
   </div>
 </div>
-
 <div class= "row">
-    <div class="col s5">
-      <div class="phatty"></div>
-        <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Videos on The Hour">VIDEOS</h1>
-      <div id="vid-box" class="buff">
-      <% @youtube.each do |x| %>
-      <p><%=x['title']%></p>
-        <div class="video-container depad">
-          <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
-        </div>
-      <% end %>
-    </div>
-    </div>
-
-<div class="col s3" style="margin-top:-11px">
+<div class="col s4" style="margin-top:-11px; display: inline-block;">
   <div class="phatty"></div>
     <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
       <div id="tweetbox">
@@ -45,21 +31,9 @@
         </ul>
     </div>
   </div>
-</div>
-</div>
-<div class= "row">
-    <div class="col s4">
-      <div class="phatty"></div>
-        <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
-      <div id="mu-box">
-        <% @soundc.each do |x| %>
-          <%= x['embedhtml'].html_safe %>
-        <% end %>
-      </div>
-  </div>
   <div class="col s8">
     <div class="phatty"></div>
-      <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">PHOTOS</h1>
+      <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">POLULAR</h1>
       <div id="materialbox">
         <div id="photo-gallery" class="material-placeholder">
           <% @instagram[0..11].each do |x|%>
@@ -79,4 +53,27 @@
         </div>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col s6">
+    <div class="phatty"></div>
+      <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Videos on The Hour">WATCH</h1>
+      <div id="vid-box" class="buff">
+      <% @youtube.each do |x| %>
+      <p><%=x['title']%></p>
+      <div class="video-container depad">
+        <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
+      </div>
+    <% end %>
   </div>
+  </div>
+    <div class="col s6">
+      <div class="phatty"></div>
+        <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
+      <div id="mu-box">
+        <% @soundc.each do |x| %>
+          <%= x['embedhtml'].html_safe %>
+        <% end %>
+      </div>
+  </div>
+</div>
