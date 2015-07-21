@@ -153,9 +153,9 @@ margin-bottom: 4px;
   color:#55ACEE;
 }
 #photo-gallery {
- //  height:400px;
+ height:400px;
  //  width:300px;
- // overflow:auto;
+ overflow:scroll;
   display:flex;
   flex-flow: row wrap;
 }
