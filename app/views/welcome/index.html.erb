@@ -2,19 +2,17 @@
   <div class= "row" style="margin-top: 25px;">
     <div id="col5">
       <div class="phatty"></div>
-        <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Stories of the Day">HEADLINES</h1>
+        <h1 class= "section">HEADLINES</h1>
           <p class="subsection" >Top Stories</p>
 
   <div class="csslider">
     <input type="radio" name="slides" checked="checked" id="slides_1"/>
     <input type="radio" name="slides" id="slides_2"/>
     <input type="radio" name="slides" id="slides_3"/>
-    <input type="radio" name="slides" id="slides_4"/>
-
 
         <ul class = 'uly'>
           <li class = 'ily'>
-      <%@bing[0..2].each do |x| %>
+      <%@bing[0..3].each do |x| %>
           <div class = 'news-content'>
             <p class="source"><%= x['source'].upcase%></p>
             <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
@@ -24,7 +22,7 @@
     </li>
 
     <li class= 'ily'>
-<%@bing[3..5].each do |x| %>
+<%@bing[4..7].each do |x| %>
     <div class = 'news-content'>
       <p class="source"><%= x['source'].upcase%></p>
       <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
@@ -34,17 +32,7 @@
 </li>
 
 <li class= 'ily'>
-<%@bing[6..8].each do |x| %>
-<div class = 'news-content'>
-  <p class="source"><%= x['source'].upcase%></p>
-  <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
-  <p class="body-ar"><%= x['description']%></p>
-</div>
-<%end%>
-</li>
-
-<li class= 'ily'>
-<%@bing[9..11].each do |x| %>
+<%@bing[8..11].each do |x| %>
 <div class = 'news-content'>
   <p class="source"><%= x['source'].upcase%></p>
   <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
@@ -58,16 +46,14 @@
   <label for="slides_1"></label>
   <label for="slides_2"></label>
   <label for="slides_3"></label>
-  <label for="slides_4"></label>
   <label for="slides_1" class="goto-first"></label>
-  <label for="slides_4" class="goto-last"></label>
+  <label for="slides_3" class="goto-last"></label>
 </div>
 <div class="navigation">
   <div>
     <label for="slides_1"></label>
     <label for="slides_2"></label>
     <label for="slides_3"></label>
-    <label for="slides_4"></label>
   </div>
 </div>
 
@@ -77,7 +63,7 @@
 
 
   <div class= "row" style="margin-top: -70px;">
-  <div class="col s4" style="display: inline-block;">
+  <div class="col s3" style="display: inline-block;">
     <div class="phatty"></div>
       <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
       <p class="subsection" >On <span class="secsource">Twitter</span></p>
@@ -92,7 +78,7 @@
       </div>
     </div>
 
-    <div class="col s5" style="margin-left:200px">
+    <div class="col s6" style="margin-left:200px">
       <div class="phatty"></div>
         <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">POPULAR</h1>
         <p class="subsection">On <span class="secsource">Instagram</span></p class="subsection">
@@ -100,7 +86,7 @@
           <div id="photo-gallery" class="material-placeholder">
             <% @instagram[2..3].each do |x|%>
             <div class = 'insta-holder'>
-              <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="250" src='<%= x['url'] %>'></img>
+              <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="265" src='<%= x['url'] %>'></img>
               <div class = 'insta-info'>
                <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
             <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
@@ -122,7 +108,7 @@
           <p class="subsection">Viral <span class="secsource">Youtube</span> Videos</p class="subsection">
         <div id="vid-box" class="buff">
         <% @youtube.each do |x| %>
-          <p><%=x['title']%></p>
+          <p class="strong"><%=x['title']%></p>
           <div class="video-container depad">
           <iframe src="https://www.youtube.com/embed/<%= x['youtubeid']%>?autoplay=0&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&controls=1&rel=0" allowfullscreen></iframe>
         </div>
