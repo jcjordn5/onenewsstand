@@ -9,10 +9,6 @@ class WelcomeController < ApplicationController
 
   # @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=player&chart=mostPopular&maxResults=3&key=AIzaSyB_6J2pFU_GMynlahPl60VBl-3gur1ZipI').to_h
   @bing = Bing.all
-  @guardian = Guardian.all
-  @nyt = Nyt.all
-  @usa = Usa.all
-  @npr = Npr.all
   @youtube = Youtube.all
   @soundc = Soundc.all
   @twit = Twit.all
