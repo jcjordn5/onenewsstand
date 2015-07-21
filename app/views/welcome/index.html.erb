@@ -8,7 +8,7 @@
       <div id="news-box">
       <%@bing.each do |x| %>
           <div class = 'news-content'>
-          <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title']%></a></p>
+          <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].upcase%></a></p>
           <p class="body-ar"><%= x['source']%></p>
           <p class="body-ar"><%= x['description']%></p>
         </div>
