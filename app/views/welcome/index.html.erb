@@ -62,7 +62,7 @@
 </div>
 
 
-  <div class= "row" style="margin-top: -70px;">
+  <div class= "row" id="secondrow">
   <div class="col s3" style="display: inline-block;">
     <div class="phatty"></div>
       <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
@@ -86,7 +86,7 @@
           <div id="photo-gallery" class="material-placeholder">
             <% @instagram[2..3].each do |x|%>
             <div class = 'insta-holder'>
-              <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="265" src='<%= x['url'] %>'></img>
+              <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
               <div class = 'insta-info'>
                <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
             <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>

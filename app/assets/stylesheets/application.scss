@@ -20,6 +20,10 @@
 @import "materialize/components/color";
 $primary-color: #3B4142 !default;
  @import "materialize";
+ #side-squeezer {
+   margin-left:60px;
+   margin-right:60px;
+ }
  h1{
    display:inline-block;
  }
@@ -138,12 +142,8 @@ font-family: 'Passion One', cursive;
   overflow: scroll;
 }
 #mu-box {
-  height: 610px;
+  height: 500px;
   overflow: scroll;
-}
-#side-squeezer {
-  margin-left:60px;
-  margin-right:60px;
 }
 .strong {
   font-family:'Lato', sans-serif;
@@ -203,6 +203,9 @@ font-weight:400;
 }
 .log:hover {
   color:#55ACEE;
+}
+#secondrow {
+margin-top: -70px;
 }
 #photo-gallery {
   display:flex;
@@ -279,4 +282,40 @@ font-weight:400;
 }
 .csslider > input:nth-of-type(4):checked ~ .uly .ily:first-of-type {
   margin-left: -300%;
+}
+//Responsive elements
+@media (max-width: 1243px) {
+  #side-squeezer {
+    margin-right:30px;
+    margin-left:30px;
+  }
+}
+@media (max-width: 1184px) {
+  #side-squeezer {
+    margin-right:5px;
+    margin-left:5px;
+  }
+}
+@media (max-width: 1134px) {
+  .csslider {
+    max-width:750px;
+    margin:0 auto;
+    left:12.5%;
+  }
+}
+@media (max-width: 851px) {
+  #side-squeezer {
+    margin-right:0px;
+    margin-left:0px;
+  }
+}
+@media (max-width: 1134px) {
+  .csslider > .navigation {
+    bottom: -24px;
+  }
+}
+@media (max-width: 1134px) {
+  #secondrow {
+    margin-top: -5px;
+  }
 }
