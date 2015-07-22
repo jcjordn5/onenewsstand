@@ -61,44 +61,43 @@
 
 
   <div class= "row" id="secondrow">
-  <div class="col s3" style="display: inline-block;">
-    <div class="phatty"></div>
-      <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
-      <p class="subsection" >On <span class="secsource">Twitter</span></p>
-        <div id="tweetbox">
-          <ul>
-            <% @twit.each do |x| %>
-            <li>
-          <a class= "tweetlink" href = "<%=x[:url]%>" target="_blank"> <%=x[:name]%> </a>
-            </li>
-            <% end %>
-          </ul>
-      </div>
-    </div>
-
-    <div class="col s6" style="margin-left:200px">
+    <div class="col s12 m12 l3" style="display: inline-block;">
       <div class="phatty"></div>
-        <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">POPULAR</h1>
-        <p class="subsection">On <span class="secsource">Instagram</span></p class="subsection">
-        <div class="materialbox">
-          <div id="photo-gallery" class="material-placeholder">
-            <% @instagram[2..3].each do |x|%>
-            <div class = 'insta-holder'>
-              <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
-              <div class = 'insta-info'>
-               <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
-            <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
-              <div>
-                #<%= x %>
-              </div>
-            <% end %>
-              </div>
-            </div>
-            <% end %>
-          </div>
+        <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
+        <p class="subsection" >On <span class="secsource">Twitter</span></p>
+          <div id="tweetbox">
+            <ul>
+              <% @twit.each do |x| %>
+              <li>
+            <a class= "tweetlink" href = "<%=x[:url]%>" target="_blank"> <%=x[:name]%> </a>
+              </li>
+              <% end %>
+            </ul>
+        </div>
       </div>
-    </div>
-  </div>
+        <div class="instacol">
+          <div class="phatty"></div>
+            <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">POPULAR</h1>
+            <p class="subsection">On <span class="secsource">Instagram</span></p class="subsection">
+            <div class="materialbox">
+              <div id="photo-gallery" class="material-placeholder">
+                <% @instagram[2..3].each do |x|%>
+                <div class = 'insta-holder'>
+                  <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
+                  <div class = 'insta-info'>
+                   <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
+                <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
+                  <div>
+                    #<%= x %>
+                  </div>
+                <% end %>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+          </div>
+        </div>
+</div>
   <div class="row">
     <div class="col s6">
       <div class="phatty"></div>
