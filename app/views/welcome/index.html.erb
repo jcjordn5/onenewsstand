@@ -71,7 +71,7 @@
 </div>
 
   <div class= "row" id="secondrow">
-    <div class="col s12 m12 l3" style="display: inline-block;">
+    <div class="col s12 m5 l3" style="display: inline-block;">
       <div class="phatty"></div>
         <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
         <p class="subsection" >On <span class="secsource">Twitter</span></p>
@@ -85,13 +85,13 @@
             </ul>
         </div>
       </div>
-        <div class="instacol">
+        <div class="col tworw">
           <div class="phatty"></div>
             <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click on Photos to Enlarge">POPULAR</h1>
             <p class="subsection">On <span class="secsource">Instagram</span></p class="subsection">
             <div class="materialbox">
               <div id="photo-gallery" class="material-placeholder">
-                <% @instagram[2..3].each do |x|%>
+                <% @instagram[0..1].each do |x|%>
                 <div class = 'insta-holder'>
                   <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
                   <div class = 'insta-info'>

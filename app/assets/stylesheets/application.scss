@@ -138,12 +138,16 @@ font-family: 'Passion One', cursive;
  overflow:auto;
 }
 #vid-box {
-  height: 500px;
+  height: 1100px;
   overflow: scroll;
 }
 #mu-box {
-  height: 500px;
+  height: 1070px;
   overflow: scroll;
+}
+.tworw {
+margin-left:400px;
+width:40%;
 }
 .strong {
   font-family:'Lato', sans-serif;
@@ -285,7 +289,7 @@ border-color: transparent transparent transparent #FF4400;
 .csslider > .arrows {
   height: 26px;
   display: block;
-  width:100%;
+  width:105%;
   top:27%;
   left:-70px;
   box-sizing: content-box;
@@ -355,6 +359,23 @@ border-color: transparent transparent transparent #FF4400;
     margin-left:5px;
   }
 }
+@media (max-width:1152px){
+  .tworw{
+  margin-left:330px;
+  }
+}
+@media (max-width:992px){
+  .tworw{
+  margin-left:90px;
+  }
+}
+@media (max-width:600px){
+  .tworw{
+  margin-left:0px;
+  width:90%;
+  }
+}
+
 @media (max-width: 1134px) {
   .csslider > .navigation {
     bottom: -24px;
