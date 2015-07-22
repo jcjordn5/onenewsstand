@@ -21,8 +21,8 @@
 $primary-color: #3B4142 !default;
  @import "materialize";
  #side-squeezer {
-   margin-left:60px;
-   margin-right:60px;
+   margin-left:55px;
+   margin-right:55px;
  }
  h1{
    display:inline-block;
@@ -214,8 +214,30 @@ margin-top: -70px;
 .csslider {
   position: relative;
   margin-left:10%;
-}
 
+}
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2)
+{
+display: block;
+left: 0;
+border-width: 17.5px 20px 17.5px 0;
+right: auto;
+border-color: transparent #FF4400  transparent transparent;
+}
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(3)
+{
+display: block;
+right: 0;
+border-width: 17.5px 0 17.5px 20px;
+left: auto;
+border-color: transparent transparent transparent #FF4400;
+
+
+}
 .csslider > input {
   display: none;
 
@@ -242,18 +264,38 @@ margin-top: -70px;
 .news-content {
   display: inline-block;
   width: 250px;
-  height: 100px;
+  height: 300px;
+  overflow: hidden;
   word-break: normal;
+  vertical-align: top;
+
 }
 
 /* Navigation */
 
 .csslider > .navigation {
   position: absolute;
-  bottom: 126px;
+  bottom: 53px;
   left: calc(50% - 96px);
 }
-
+.csslider > .arrows {
+  height: 26px;
+  display: block;
+  width:100%;
+  top:27%;
+  left:-40px;
+  box-sizing: content-box;
+  position: absolute;
+}
+.csslider > .arrows  label{
+  cursor: pointer;
+  display: none;
+  top: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
 .csslider > .navigation label {
   position: relative;
   display: inline-block;
@@ -266,7 +308,7 @@ margin-top: -70px;
   content: '';
   position: absolute;
   border-radius: 50%;
-  background: #FF4400;;
+  background: #FF4400;
   padding: 5px;
 }
 
@@ -297,6 +339,16 @@ margin-top: -70px;
   }
 }
 @media (max-width: 1134px) {
+  .csslider > .navigation {
+    bottom: -24px;
+  }
+}
+@media (max-width: 1134px) {
+  #secondrow {
+    margin-top: -5px;
+  }
+}
+@media (max-width: 1134px) {
   .csslider {
     max-width:750px;
     margin:0 auto;
@@ -307,15 +359,5 @@ margin-top: -70px;
   #side-squeezer {
     margin-right:0px;
     margin-left:0px;
-  }
-}
-@media (max-width: 1134px) {
-  .csslider > .navigation {
-    bottom: -24px;
-  }
-}
-@media (max-width: 1134px) {
-  #secondrow {
-    margin-top: -5px;
   }
 }
