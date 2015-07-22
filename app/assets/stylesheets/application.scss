@@ -273,3 +273,12 @@ font-weight:400;
 .csslider > input:nth-of-type(4):checked ~ .uly .ily:first-of-type {
   margin-left: -300%;
 }
+
+.csslider > .arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
