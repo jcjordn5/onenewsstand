@@ -13,12 +13,17 @@
  *= require_tree .
  *= require_self
  */
-@import url(https://fonts.googleapis.com/css?family=Lora:700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(http://fonts.googleapis.com/css?family=EB+Garamond);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Passion+One:700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Passion+One:400,700);
 @import "materialize/components/color";
 $primary-color: #3B4142 !default;
  @import "materialize";
+ #side-squeezer {
+   margin-left:55px;
+   margin-right:55px;
+ }
  h1{
    display:inline-block;
  }
@@ -49,8 +54,9 @@ $primary-color: #3B4142 !default;
   padding-top: 11px;
   font-size: 50px;
 font-family: 'Passion One', cursive;
-  font-weight: 700;
-  height:68px;
+  font-weight: 400;
+  character-spacing:5px;
+  height:78px;
 }
 
 .buff {
@@ -121,6 +127,10 @@ font-family: 'Passion One', cursive;
 #tweetbox {
   margin-top: 29px;
   background-color: #F5FAFC;
+  width: 323px;
+}
+.materialbox {
+  margin-right: -75px;
 }
 #photobox {
   height:300px;
@@ -132,12 +142,8 @@ font-family: 'Passion One', cursive;
   overflow: scroll;
 }
 #mu-box {
-  height: 610px;
+  height: 500px;
   overflow: scroll;
-}
-#side-squeezer {
-  margin-left:60px;
-  margin-right:60px;
 }
 .strong {
   font-family:'Lato', sans-serif;
@@ -198,23 +204,49 @@ font-weight:400;
 .log:hover {
   color:#55ACEE;
 }
+#secondrow {
+margin-top: -70px;
+}
 #photo-gallery {
   display:flex;
 }
 
 .csslider {
   position: relative;
-}
+  margin-left:10%;
 
+}
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2)
+{
+display: block;
+left: 0;
+border-width: 17.5px 20px 17.5px 0;
+right: auto;
+border-color: transparent #FF4400  transparent transparent;
+}
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(3)
+{
+display: block;
+right: 0;
+border-width: 17.5px 0 17.5px 20px;
+left: auto;
+border-color: transparent transparent transparent #FF4400;
+
+
+}
 .csslider > input {
   display: none;
+
 }
 
 .csslider > .uly {
   position: relative;
-  width: 1000px;
+  width: 100%;
   height: 420px;
-  padding: 10% 0;
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
@@ -232,18 +264,38 @@ font-weight:400;
 .news-content {
   display: inline-block;
   width: 250px;
-  height: 100px;
+  height: 300px;
+  overflow: hidden;
   word-break: normal;
+  vertical-align: top;
+
 }
 
 /* Navigation */
 
 .csslider > .navigation {
   position: absolute;
-  bottom: -8px;
-  left: calc(50% - 26px);
+  bottom: 53px;
+  left: calc(50% - 96px);
 }
-
+.csslider > .arrows {
+  height: 26px;
+  display: block;
+  width:100%;
+  top:27%;
+  left:-40px;
+  box-sizing: content-box;
+  position: absolute;
+}
+.csslider > .arrows  label{
+  cursor: pointer;
+  display: none;
+  top: 50%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
 .csslider > .navigation label {
   position: relative;
   display: inline-block;
@@ -256,7 +308,7 @@ font-weight:400;
   content: '';
   position: absolute;
   border-radius: 50%;
-  background: #71AD37;
+  background: #FF4400;
   padding: 5px;
 }
 
@@ -281,4 +333,40 @@ font-weight:400;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+//Responsive elements
+@media (max-width: 1243px) {
+  #side-squeezer {
+    margin-right:30px;
+    margin-left:30px;
+  }
+}
+@media (max-width: 1184px) {
+  #side-squeezer {
+    margin-right:5px;
+    margin-left:5px;
+  }
+}
+@media (max-width: 1134px) {
+  .csslider > .navigation {
+    bottom: -24px;
+  }
+}
+@media (max-width: 1134px) {
+  #secondrow {
+    margin-top: -5px;
+  }
+}
+@media (max-width: 1134px) {
+  .csslider {
+    max-width:750px;
+    margin:0 auto;
+    left:12.5%;
+  }
+}
+@media (max-width: 851px) {
+  #side-squeezer {
+    margin-right:0px;
+    margin-left:0px;
+  }
 }
