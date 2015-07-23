@@ -71,7 +71,7 @@
 </div>
 
   <div class= "row" id="secondrow">
-    <div class="col s12 m5 l3">
+    <div class="col s12 m5 l5">
       <div class="phatty"></div>
         <h1 class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Today's most popular tweets">#TRENDING</h1>
         <p class="subsection" >On <span class="secsource">Twitter</span></p>
@@ -109,7 +109,27 @@
         </div>
 </div>
   <div class="row">
-    <div class="col s12  m12 l6">
+
+      <div class="col s12 m12 l5">
+        <div class="phatty"></div>
+          <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
+          <p class="subsection">Top <span class="secsource">SoundCloud</span> Tracks</p class="subsection">
+            <div id="mu-box">
+          <% @soundc.each do |x| %>
+            <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<%=x['embedhtml']%>&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;buying=false&amp;sharing=false&amp;liking=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+            <div class="soundcloudspace"></div>
+            <style>
+            .cookiePolicy{
+              display:none;
+            }
+            .sc-visuallyhidden{
+                display:none;
+              }
+            </style>
+          <% end %>
+        </div>
+    </div>
+    <div class="col s12  m12 l6" style="float:right">
       <div class="phatty"></div>
         <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="The Most Popular Videos on The Hour">WATCH</h1>
           <p class="subsection">Viral <span class="secsource">Youtube</span> Videos</p class="subsection">
@@ -122,24 +142,5 @@
           <% end %>
         </div>
     </div>
-      <div class="col s12 m12 l6">
-        <div class="phatty"></div>
-          <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
-          <p class="subsection">Top <span class="secsource">SoundCloud</span> Tracks</p class="subsection">
-            <div id="mu-box">
-          <% @soundc.each do |x| %>
-            <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<%=x['embedhtml']%>&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;buying=false&amp;sharing=false&amp;liking=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
-            <style>
-            .cookiePolicy{
-              display:none;
-            }
-            .sc-visuallyhidden{
-                display:none;
-              }
-            </style>
-          <% end %>
-        </div>
-    </div>
   </div>
-</div>
 </div>
