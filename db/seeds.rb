@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=7&key='+ENV['YouTubeKey']).to_h
 @youtube['items'].each do |x|
 Youtube.create(youtubeid: x['id'], title: x['snippet']['title'])
