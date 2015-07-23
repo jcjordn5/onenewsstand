@@ -14,9 +14,9 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
-@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Passion+One:400,700);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Passion+One:400,700);
 @import "materialize/components/color";
 $primary-color: #3B4142 !default;
  @import "materialize";
@@ -138,13 +138,14 @@ font-family: 'Passion One', cursive;
  overflow:auto;
 }
 #vid-box {
-  height: 500px;
-  overflow: scroll;
+  height: 565px;
+  overflow:scroll;
 }
 #mu-box {
-  height: 500px;
-  overflow: scroll;
+  height: 510px;
+  overflow: visible;
 }
+
 .strong {
   font-family:'Lato', sans-serif;
   font-weight:700;
@@ -285,7 +286,7 @@ border-color: transparent transparent transparent #FF4400;
 .csslider > .arrows {
   height: 26px;
   display: block;
-  width:100%;
+  width:105%;
   top:27%;
   left:-70px;
   box-sizing: content-box;
@@ -343,7 +344,7 @@ border-color: transparent transparent transparent #FF4400;
     float:right;
   }
 }
-@media (max-width: 1243px) {
+@media (max-width: 1248px) {
   #side-squeezer {
     margin-right:30px;
     margin-left:30px;
@@ -355,6 +356,7 @@ border-color: transparent transparent transparent #FF4400;
     margin-left:5px;
   }
 }
+
 @media (max-width: 1134px) {
   .csslider > .navigation {
     bottom: -24px;

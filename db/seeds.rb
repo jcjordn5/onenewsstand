@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
 @youtube = HTTParty.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=7&key='+ENV['YouTubeKey'])
 count = 0
 until @youtube.code == 200 || count < 5

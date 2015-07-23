@@ -9,7 +9,7 @@ spull = HTTParty.get('https://api-v2.soundcloud.com/explore/'+@categories.sample
 count = 0
 until spull.code == 200 || count < 10
   count +=1
-  spull = HTTParty.get('https://api-v2.soundcloud.com/explore/'+@categories.sample+'?limit=10&offset=0&client_id='+ENV['SoundCloudKey'])
+  spull = HTTParty.get('https://api-v2.soundcloud.com/explore/'+@categories.sample+'?limit=5&offset=0&client_id='+ENV['SoundCloudKey'])
 end
 
 sclient = SoundCloud.new(:client_id => ENV['SoundCloudKey'])
