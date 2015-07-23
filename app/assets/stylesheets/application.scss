@@ -128,7 +128,7 @@ font-family: 'Passion One', cursive;
 #tweetbox {
   margin-top: 29px;
   background-color: #F5FAFC;
-  width: 323px;
+  width:100%;
 }
 .materialbox {
   margin-right: -75px;
@@ -147,10 +147,16 @@ font-family: 'Passion One', cursive;
   overflow: visible;
 }
 
+#mu-box > iframe {
+}
+
 .strong {
+  font-size: 18px;
   font-family:'Lato', sans-serif;
   font-weight:700;
   color:#3B4142;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 .headline {
   font-family:'Lato', sans-serif;
@@ -167,6 +173,13 @@ font-family: 'Passion One', cursive;
     width: 100%;
     word-wrap: break-word;
 }
+
+.insta-info > p {
+
+margin-right: 35px;
+
+}
+
 .depad {
   margin: -10px;
 }
@@ -429,7 +442,6 @@ display: none
 /*tweetbox queries*/
 @media (max-width: 799px){
   #tweetbox {
-    width: 100%;
     text-align: center;
   }
 }
@@ -439,6 +451,6 @@ display: none
   }
 }
 
-.cookiePolicy{
-  display:none;
+.soundcloudspace {
+  margin-bottom: 5px;
 }
