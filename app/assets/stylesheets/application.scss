@@ -164,6 +164,7 @@ font-family: 'Passion One', cursive;
     font-family:'Lato', sans-serif;
     position: relative;
     width: 100%;
+    word-wrap: break-word;
 }
 .depad {
   margin: -10px;
@@ -221,7 +222,7 @@ margin-top: -70px;
   margin-left:10%;
 
 }
-.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(1),
+// .csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(1),
 .csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
 .csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2)
 {
@@ -232,8 +233,8 @@ right: auto;
 border-color: transparent #FF4400  transparent transparent;
 }
 .csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
-.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
-.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(3)
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3)
+// .csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(3)
 {
 display: block;
 right: 0;
@@ -280,7 +281,7 @@ border-color: transparent transparent transparent #FF4400;
 
 .csslider > .navigation {
   position: absolute;
-  bottom: 53px;
+  bottom: 130px;
   left: calc(50% - 96px);
 }
 .csslider > .arrows {
@@ -301,20 +302,32 @@ border-color: transparent transparent transparent #FF4400;
   height: 0;
   border-style: solid;
 }
+
 .csslider > .navigation label {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  border-radius: 50%;
   margin: 0 4px;
   padding: 4px;
+  background: #3a3a3a;
 }
 
 .csslider > .navigation label:after {
   content: '';
   position: absolute;
-  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
   background: #FF4400;
-  padding: 5px;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
+}
+
+.csslider > .navigation label:hover:after {
+  opacity: 1;
 }
 
 /* Slider Movement */
