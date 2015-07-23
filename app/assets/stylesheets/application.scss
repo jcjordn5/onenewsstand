@@ -138,15 +138,15 @@ font-family: 'Passion One', cursive;
  overflow:auto;
 }
 #vid-box {
-  height: 570px;
-  overflow:visible;
+  height: 510px;
+  overflow:scroll;
 }
 #mu-box {
-  height: 570px;
-  overflow: scroll;
+  height: 510px;
+  overflow: visible;
 }
 .tworw {
-margin-left:400px;
+margin-left:300px;
 width:40%;
 }
 .strong {
@@ -357,11 +357,6 @@ border-color: transparent transparent transparent #FF4400;
   #side-squeezer {
     margin-right:5px;
     margin-left:5px;
-  }
-}
-@media (max-width:1152px){
-  .tworw{
-  margin-left:330px;
   }
 }
 @media (max-width:992px){
