@@ -139,8 +139,9 @@ font-family: 'Passion One', cursive;
  overflow:auto;
 }
 #vid-box {
+  overflow-x: hidden;
   height: 565px;
-  overflow:scroll;
+  overflow-y:scroll;
 }
 #mu-box {
   height: 510px;
@@ -292,6 +293,7 @@ border-color: transparent transparent transparent #FF4400;
 }
 .instacol {
   float:right;
+  margin-right:100px;
 }
 
 /* Navigation */
