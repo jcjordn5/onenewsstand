@@ -290,6 +290,9 @@ border-color: transparent transparent transparent #FF4400;
   vertical-align: top;
 
 }
+.instacol {
+  float:right;
+}
 
 /* Navigation */
 
@@ -374,11 +377,6 @@ border-color: transparent transparent transparent #FF4400;
 @media (min-width: 1900px) {
   .instacol{
     margin-right:146px;
-  }
-}
-@media (min-width: 700px) {
-  .instacol {
-    float:right;
   }
 }
 
