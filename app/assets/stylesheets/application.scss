@@ -344,6 +344,13 @@ border-color: transparent transparent transparent #FF4400;
   padding: 6px;
   opacity: 0;
 }
+.csslider.swiperight {
+  display: block;
+  right: 0;
+  border-width: 17.5px 0 17.5px 20px;
+  left: auto;
+  border-color: transparent transparent transparent #FF4400;
+}
 
 .csslider > .navigation label:hover:after {
   opacity: 1;
