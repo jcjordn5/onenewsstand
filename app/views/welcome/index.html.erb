@@ -93,7 +93,7 @@
               <div id="photo-gallery" class="material-placeholder">
                 <% @instagram[0..1].each do |x|%>
                 <div class = 'insta-holder'>
-                  <img class="materialboxed" data-caption="User: <%=x['username']%> Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
+                  <img class="materialboxed" data-caption="Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
                   <div class = 'insta-info'>
                    <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
                 <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
@@ -112,7 +112,7 @@
 
       <div class="col s12 m12 l5">
         <div class="phatty"></div>
-          <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">NEW TRACKS</h1>
+          <h1  class= "section tooltipped" data-position="right" data-delay="50" data-tooltip="Click Play to listen to the Hottest tracks">TRACKS</h1>
           <p class="subsection">Top <span class="secsource">SoundCloud</span> Tracks</p class="subsection">
             <div id="mu-box">
           <% @soundc.each do |x| %>
