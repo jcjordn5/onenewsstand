@@ -112,11 +112,17 @@ font-family: 'Passion One', cursive;
 }
 .news-content{
   display: inline-block;
-  width: 300px;
-  height: 100px;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  word-break: normal;
+  vertical-align: top;
   padding-right: 30px;
-  position: inherit;
+  // position: inherit;
+}
 
+.news-content:nth-of-type(4){
+  padding-right: 0;
 }
 
 #wrapper {
@@ -234,7 +240,7 @@ margin-top: -70px;
 
 .csslider {
   position: relative;
-  margin-left:10%;
+  left: 0%;
 
 }
 // .csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(1),
@@ -266,12 +272,13 @@ border-color: transparent transparent transparent #FF4400;
 
 .csslider > .uly {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 420px;
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
 }
+
 
 .csslider > .uly > .ily {
   position: relative;
@@ -282,15 +289,15 @@ border-color: transparent transparent transparent #FF4400;
   white-space: normal;
 }
 
-.news-content {
-  display: inline-block;
-  width: 250px;
-  height: 300px;
-  overflow: hidden;
-  word-break: normal;
-  vertical-align: top;
-
-}
+// .news-content {
+//   display: inline-block;
+//   width: 250px;
+//   height: 300px;
+//   overflow: hidden;
+//   word-break: normal;
+//   vertical-align: top;
+//
+// }
 .instacol {
   float:right;
   margin-right:100px;
@@ -308,7 +315,7 @@ border-color: transparent transparent transparent #FF4400;
   display: block;
   width:105%;
   top:27%;
-  left:-70px;
+  left:-35px;
   box-sizing: content-box;
   position: absolute;
 }

@@ -94,7 +94,7 @@
               <div id="photo-gallery" class="material-placeholder">
                 <% @instagram[0..1].each do |x|%>
                 <div class = 'insta-holder'>
-                  <img class="materialboxed" data-caption="Description: <%=x['description']%>" width="235" src='<%= x['url'] %>'></img>
+                  <img class="materialboxed" src='<%= x['url'] %>'></img>
                   <div class = 'insta-info'>
                    <p> <a class="strong" href= 'https://instagram.com/<%=x['username']%>'><%=x['username']%></a> <%=x['description']%></p>
                 <%x['tags'].gsub(/[\[\]"]/,"").split(",").each do |x| %>
