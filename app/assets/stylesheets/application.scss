@@ -371,7 +371,12 @@ border-color: transparent transparent transparent #FF4400;
 //Responsive elements
 @media (min-width: 1900px) {
   .csslider {
-    margin-left:20%;
+    margin-left:25%;
+  }
+}
+@media (min-width: 1900px) {
+  .csslider  > .navigation{
+    left: calc(50% - 225px);
   }
 }
 @media (min-width: 1900px) {
