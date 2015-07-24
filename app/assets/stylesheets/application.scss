@@ -366,11 +366,22 @@ border-color: transparent transparent transparent #FF4400;
   user-select: none;
 }
 //Responsive elements
+@media (min-width: 1900px) {
+  .csslider {
+    margin-left:12%;
+  }
+}
+@media (min-width: 1900px) {
+  .csslider{
+    margin-right:146px;
+  }
+}
 @media (min-width: 700px) {
   .instacol {
     float:right;
   }
 }
+
 @media (max-width: 1248px) {
   #side-squeezer {
     margin-right:30px;
