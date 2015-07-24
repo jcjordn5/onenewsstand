@@ -139,8 +139,9 @@ font-family: 'Passion One', cursive;
  overflow:auto;
 }
 #vid-box {
+  overflow-x: hidden;
   height: 565px;
-  overflow:scroll;
+  overflow-y:scroll;
 }
 #mu-box {
   height: 510px;
@@ -290,6 +291,10 @@ border-color: transparent transparent transparent #FF4400;
   vertical-align: top;
 
 }
+.instacol {
+  float:right;
+  margin-right:100px;
+}
 
 /* Navigation */
 
@@ -339,6 +344,13 @@ border-color: transparent transparent transparent #FF4400;
   padding: 6px;
   opacity: 0;
 }
+.csslider.swiperight {
+  display: block;
+  right: 0;
+  border-width: 17.5px 0 17.5px 20px;
+  left: auto;
+  border-color: transparent transparent transparent #FF4400;
+}
 
 .csslider > .navigation label:hover:after {
   opacity: 1;
@@ -373,11 +385,22 @@ border-color: transparent transparent transparent #FF4400;
   user-select: none;
 }
 //Responsive elements
-@media (min-width: 700px) {
-  .instacol {
-    float:right;
+@media (min-width: 1900px) {
+  .csslider {
+    margin-left:25%;
   }
 }
+@media (min-width: 1900px) {
+  .csslider  > .navigation{
+    left: calc(50% - 225px);
+  }
+}
+@media (min-width: 1900px) {
+  .instacol{
+    margin-right:146px;
+  }
+}
+
 @media (max-width: 1248px) {
   #side-squeezer {
     margin-right:30px;

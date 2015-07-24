@@ -1,6 +1,6 @@
 class SoundcloudApi
 
-require('HTTParty')
+require('httparty')
 
 def self.soundcloudwidget
 @sounds = []
