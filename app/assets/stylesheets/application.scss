@@ -308,7 +308,7 @@ border-color: transparent transparent transparent #FF4400;
 .csslider > .navigation {
   position: absolute;
   bottom: 130px;
-  left: calc(50% - 96px);
+  left: calc(50% - 71px);
 }
 .csslider > .arrows {
   height: 26px;
@@ -350,13 +350,6 @@ border-color: transparent transparent transparent #FF4400;
   border-radius: 50%;
   padding: 6px;
   opacity: 0;
-}
-.csslider.swiperight {
-  display: block;
-  right: 0;
-  border-width: 17.5px 0 17.5px 20px;
-  left: auto;
-  border-color: transparent transparent transparent #FF4400;
 }
 
 .csslider > .navigation label:hover:after {
@@ -424,7 +417,7 @@ border-color: transparent transparent transparent #FF4400;
 @media (max-width: 1134px) {
   .csslider > .navigation {
     bottom: -24px;
-    left: calc(50% - 150px);
+    left: calc(50% - 105px);
   }
 }
 @media (max-width: 1134px) {
