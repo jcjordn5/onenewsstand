@@ -15,7 +15,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic);
 @import url(https://fonts.googleapis.com/css?family=Passion+One:400,700);
 @import "materialize/components/color";
 $primary-color: #3B4142 !default;
@@ -48,7 +48,14 @@ $primary-color: #3B4142 !default;
     iframe {
       border:none;
     }
-
+.date {
+  margin-left:20px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  font-size:20px;
+  font-weight:300;
+  font-style:italic;
+}
 #session {
   padding-left:60px;
   padding-top: 11px;
@@ -307,7 +314,7 @@ border-color: transparent transparent transparent #FF4400;
 
 .csslider > .navigation {
   position: absolute;
-  bottom: 155px;
+  bottom: 110px;
   left: calc(50% - 71px);
 }
 .csslider > .arrows {
@@ -362,7 +369,12 @@ border-color: transparent transparent transparent #FF4400;
 {
   opacity: 1;
 }
-
+.footer-copyright {
+  margin-left: -140px;
+}
+.cr {
+  color: #55ACEE;
+}
 /* Slider Movement */
 .csslider > input:nth-of-type(1):checked ~ .uly .ily:first-of-type {
   margin-left: 0%;
@@ -456,7 +468,7 @@ display: none
     top: 488%;
   }
 }
-@media (min-width: 1135px) {
+@media (min-width: 1900px) {
   .csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
   .csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3)
   {
