@@ -21,35 +21,35 @@
     <input type="radio" name="slides" id="slides_2"/>
     <input type="radio" name="slides" id="slides_3"/>
 
-        <ul class = 'uly'>
-          <li class = 'ily'>
-      <%@bing[0..3].each do |x| %>
-          <div class = 'news-content'>
-            <p class="source"><%= x['source'].upcase%></p>
-            <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
-            <p class="body-ar"><%= x['description']%></p>
-        </div>
-      <%end%>
-    </li>
-
-    <li class= 'ily'>
-<%@bing[4..7].each do |x| %>
-    <div class = 'news-content'>
-      <p class="source"><%= x['source'].upcase%></p>
-      <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
-      <p class="body-ar"><%= x['description']%></p>
-  </div>
-<%end%>
+<ul class = 'uly'>
+  <li class = 'ily'>
+  <%@bing[0..3].each do |x| %>
+      <div class = 'news-content'>
+        <p class="source"><%= x['source'].upcase%></p>
+        <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
+        <p class="body-ar"><%= x['description']%></p>
+    </div>
+  <%end%>
 </li>
 
 <li class= 'ily'>
-<%@bing[8..11].each do |x| %>
-<div class = 'news-content'>
-  <p class="source"><%= x['source'].upcase%></p>
-  <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
-  <p class="body-ar"><%= x['description']%></p>
-</div>
-<%end%>
+  <%@bing[4..7].each do |x| %>
+      <div class = 'news-content'>
+        <p class="source"><%= x['source'].upcase%></p>
+        <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
+        <p class="body-ar"><%= x['description']%></p>
+    </div>
+  <%end%>
+</li>
+
+<li class= 'ily'>
+  <%@bing[8..11].each do |x| %>
+  <div class = 'news-content'>
+    <p class="source"><%= x['source'].upcase%></p>
+    <p class="headline"><a href ="<%=x[:url]%>" target="_blank"> <%=x['title'].capitalize%></a></p>
+    <p class="body-ar"><%= x['description']%></p>
+  </div>
+  <%end%>
 </li>
     </ul>
 
