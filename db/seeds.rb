@@ -29,11 +29,6 @@ Instagram.create(url: x['images']['standard_resolution']['url'], username: x['us
 end
 
 @bing = HTTParty.get('https://x:'+ENV['BingKey']+'@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
-count = 0
-until @bing.code == 200 || count < 5
-  count +=1
-  @bing  = HTTParty.get('https://x:'+ENV['BingKey']+'@api.datamarket.azure.com/Bing/Search/v1/News?Query=%27news%27&Market=%27en-US%27&NewsCategory=%27rt_Entertainment%27&NewsSortBy=%27Date%27&$format=json')
-end
 @bing['d']['results'].each do |x|
 Bing.create(title: x['Title'], url: x['Url'], source: x['Source'], description: x['Description'], date: x['Date'])
 end
