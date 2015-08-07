@@ -26,14 +26,6 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "guardians", force: :cascade do |t|
-    t.string   "weburl"
-    t.string   "webtitle"
-    t.string   "webPublicationDate"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
   create_table "instagrams", force: :cascade do |t|
     t.string   "url"
     t.datetime "created_at",  null: false
@@ -41,28 +33,6 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "username"
     t.string   "description"
     t.string   "tags"
-  end
-
-  create_table "niles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "nprs", force: :cascade do |t|
-    t.string   "link"
-    t.string   "title"
-    t.string   "teaser"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "nyts", force: :cascade do |t|
-    t.string   "url"
-    t.string   "title"
-    t.string   "abstract"
-    t.string   "published_date"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
   end
 
   create_table "soundcs", force: :cascade do |t|
@@ -76,22 +46,6 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "usas", force: :cascade do |t|
-    t.string   "link"
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name",            null: false
-    t.string   "email"
-    t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
   create_table "youtubes", force: :cascade do |t|
