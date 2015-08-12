@@ -40,3 +40,9 @@ end
 TwitterApi.trending_tweets.to_h[:trends].each do |x|
 Twit.create(url: x[:url], name: x[:name])
 end
+
+Bing.where('created_at <= ?', (Time.now - 500)).destroy_all
+Youtube.where('created_at <= ?', (Time.now - 500)).destroy_all
+Instagram.where('created_at <= ?', (Time.now - 500)).destroy_all
+Soundc.where('created_at <= ?', (Time.now - 500)).destroy_all
+Twit.where('created_at <= ?', (Time.now - 500)).destroy_all
