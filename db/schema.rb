@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720223418) do
+ActiveRecord::Schema.define(version: 20150812183836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "time_made"
   end
 
   create_table "guardians", force: :cascade do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "username"
     t.string   "description"
     t.string   "tags"
+    t.datetime "time_made"
   end
 
   create_table "niles", force: :cascade do |t|
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "embedhtml"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "time_made"
   end
 
   create_table "twits", force: :cascade do |t|
@@ -76,6 +79,7 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "time_made"
   end
 
   create_table "usas", force: :cascade do |t|
@@ -99,6 +103,7 @@ ActiveRecord::Schema.define(version: 20150720223418) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+    t.datetime "time_made"
   end
 
 end
