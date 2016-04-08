@@ -76,7 +76,7 @@
         <p class="subsection" >On <span class="secsource">Twitter</span></p>
           <div id="tweetbox">
             <ul>
-              <% @twit.each do |x| %>
+              <% @twit[1..10].each do |x| %>
               <li>
             <a class= "tweetlink" href = "<%=x[:url]%>" target="_blank"> <%=x[:name]%> </a>
               </li>
